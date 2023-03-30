@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  font-family: "Merriweather", serif;
+  background-image: linear-gradient(
+    to right top,
+    #186be9,
+    #3a76ed,
+    #5181f1,
+    #638df4,
+    #7498f8
+  );
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* these are the global styles for each projects so I am not going to touch them */
+.container {
+  position: relative;
+  height: 50px;
+}
+.search {
+  height: 50px;
+  width: 50px;
+  background: white;
+  border: 0;
+  position: relative;
+  padding: 1rem;
+  transition: width 0.4s ease;
+  border-radius: 5px;
+}
+
+.btn {
+  position: absolute;
+  border: 0;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  background: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: transform 0.4s ease;
+  border-radius: 5px;
+}
+
+.btn:focus,
+.search:focus {
+  outline: none;
+}
+
+.container.active .search {
+  width: 200px;
+  border-radius: 1rem;
+}
+
+.container.active .btn {
+  transform: translateX(200px);
+  border-radius: 30px;
+  margin-left: 5px;
+}
